@@ -1,0 +1,77 @@
+{
+  "welcome_heading": "Welcome",
+  "welcome_subheading": "Log in to your Kamco Invest account",
+  "welcome_description": "Manage your investment portfolio and wealth efficiently through a unified platform built with the highest security standards. Monitor your investments with precision, access comprehensive details, and stay updated on the latest market trends powered by AI technology to support informed decision-making.",
+  "support_message": "Need assistance? Contact our support team at",
+  "support_mail": "support@kamcoinvest.com",
+
+  "sign_in": "Sign In",
+  "portal_welcome": "Welcome to Kamco Invest portal",
+  "email_label": "Email address",
+  "email_placeholder": "Enter your Email address",
+  "invalid_email_message":"Enter a valid email address!",
+  "password_label": "Password",
+  "password_placeholder": "Enter your Password",
+  "invalid_password_message":"Input your Password!",
+  "login_button": "Login",
+  "forgot_password": "Forgot Password?",
+
+  "quick_actions": "Quick actions",
+  "download_app": "Download app",
+  "announcements": "Announcements",
+  "products": "Products",
+  "research": "Research",
+  "contact_us": "Contact us",
+  "security_tips": "Security Tips",
+  "kamco_website": "Kamco website",
+  "branches": "Branches",
+
+  "qr_title": "Scan QR code",
+  "qr_description": "Scan this code to open KAMCO Invest application",
+  "close": "Close",
+
+  "tip_secure_connection_title": "Use a Secure Connection",
+  "tip_secure_connection_desc": "Always connect to the internet through a secure and trusted network, preferably a private Wi-Fi connection or cellular data. Avoid using public Wi-Fi networks for sensitive transactions.",
+
+  "tip_update_app_title": "Update the App Regularly",
+  "tip_update_app_desc": "Keep your app and device software up to date to ensure you have the latest security patches. Updates often fix vulnerabilities that attackers can exploit, so enable automatic updates whenever possible.",
+
+  "tip_biometric_title": "Enable App Lock and Biometric Authentication",
+  "tip_biometric_desc": "Use app locks and biometric features like fingerprint or face recognition to add a second layer of security. This ensures only authorized users can access your sensitive information even if the device is unlocked.",
+
+  "tip_phishing_title": "Beware of Phishing Attempts",
+  "tip_phishing_desc": "Be cautious of emails, messages, or calls requesting personal information. Always verify the source before clicking links or downloading attachments. Legitimate organizations will never ask for passwords via email.",
+
+  "tip_device_security_title": "Secure Your Device",
+  "tip_device_security_desc": "Set strong device passwords or PINs and enable features like screen lock and automatic timeout. Avoid jailbreaking or rooting your device, which can expose it to security threats.",
+
+  "tip_review_activity_title": "Review Account Activity Regularly",
+  "tip_review_activity_desc": "Frequently check your account activity for suspicious transactions or logins. Most platforms allow you to review login history or receive alerts for unusual behavior—take advantage of these tools.",
+
+  "tip_logout_title": "Logout After Each Session",
+  "tip_logout_desc": "Always log out of your accounts after completing your session, especially on shared or public devices. This prevents unauthorized access if someone else uses the device after you.",
+
+  "tip_learn_features_title": "Educate Yourself on Security Features",
+  "tip_learn_features_desc": "Stay informed about built-in security tools and features offered by your apps and devices. Understanding these can help you take full advantage of protective measures like encryption, 2FA, and account recovery.",
+
+  "tip_info_security_title": "Keep Personal Information Secure",
+  "tip_info_security_desc": "Avoid sharing personal details such as your address, phone number, or financial information unless absolutely necessary. Be cautious about the permissions you grant to apps, especially those that access your contacts or location.",
+
+  "tip_security_software_title": "Install Security Software",
+  "tip_security_software_desc": "Use reputable antivirus or security apps to detect and remove malware. These tools often offer real-time protection, safe browsing alerts, and regular scans to keep your device clean.",
+
+  "tip_public_device_title": "Be Cautious with Public Devices",
+  "tip_public_device_desc": "Avoid accessing sensitive accounts from public or shared computers. If you must use them, enable incognito mode, avoid saving passwords, and log out of all services before leaving the device.",
+  "language_toggle":"العربية",
+
+  "forgot-password-header": "You already have an account?",
+  "forgot-password-link": "Log In",
+  "forgot-password-title": "Hello,",
+  "forgot-password-subtitle": "Enter your email to send you a reset link",
+  "forgot-password-email-placeholder": "Enter your Email address",
+  "forgot-password-reset-button": "Send Reset Link",
+  "back-button": "Back",
+
+  "session_expired_login_again": "Session Expired! Login Again!"
+
+}

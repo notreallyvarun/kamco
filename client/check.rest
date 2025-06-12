@@ -1,0 +1,8 @@
+### Login
+GET http://localhost:5000/api/protected
+Content-Type: application/json
+
+{
+  "username": "kamco",
+  "password": "12345"
+}

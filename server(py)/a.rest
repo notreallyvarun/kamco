@@ -1,0 +1,27 @@
+POST http://localhost:8000/api/auth/register
+Content-Type: application/json
+
+{
+  "email":"test@kamco.com",
+  "password":"5214"
+}
+###
+POST http://localhost:8000/api/auth/login
+Content-Type: application/json
+
+{
+  "email":"test@kamco.com",
+  "password":"5214"
+}
+###
+GET http://localhost:8000/api/auth/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAa2FtY28uY29tIiwiZXhwIjoxNzQ5NjQ1NDkxfQ.5__qZs14w0zNk3PhN_nerk6SaDdjX86GXpTId38LtqM
+
+###
+POST http://localhost:8000/api/auth/token
+Content-Type: application/json
+
+{
+  "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAa2FtY28uY29tIiwiZXhwIjoxNzUwMjUwMjQ3fQ.NJ69ou05Cep6h4fPCKWuN-9jZYo8xGr1M-YJbukVVR4"
+}
+
