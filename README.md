@@ -1,4 +1,4 @@
-### KAMCO Investment Platform: A Full-Stack Web Application
+# KAMCO Investment Platform: A Full-Stack Web Application
 
 ## 🎯 Project Overview
 This project delivers a robust and user-friendly investment platform, showcasing a seamless integration between a modern Next.js frontend and a high-performance Python backend. Designed for registered users, it provides secure authentication, personalized data access, and a dynamic multi-language experience, making it an excellent demonstration of full-stack development capabilities.
