@@ -91,30 +91,9 @@ View profile details, including your email address.
 
 Switch between English ↔ Arabic using the language toggle
 ## 📁 Project Structure
-kamco-investment-platform/
-├── client/               # Next.js Frontend
-│   ├── public/           # Static assets
-│   ├── src/
-│   │   ├── components/   # Reusable React components
-│   │   ├── lib/          # Utilities (e.g., cn.ts)
-│   │   ├── messages/     # i18n translation files (en.json, ar.json)
-│   │   ├── pages/        # App pages (login.js, dashboard.js, etc.)
-│   │   └── styles/       # Global styles
-│   ├── .env.local        # Environment variables
-│   ├── package.json
-│   └── next.config.mjs
+![image](https://github.com/user-attachments/assets/53b0fffe-51d0-4ec3-b69b-2b28d3bd38ae)
 
-└── server/               # FastAPI Backend
-    ├── venv/             # Python virtual environment
-    ├── alembic/          # Database migrations
-    ├── auth.py           # JWT Auth logic
-    ├── database.py       # DB setup
-    ├── main.py           # Entry point
-    ├── models.py         # SQLAlchemy models
-    ├── routes.py         # API routes
-    ├── .env              # Environment variables
-    ├── requirements.txt
-    └── alembic.ini
+    
 ## 💡 Resume Highlights
 This project is perfect for showcasing your full-stack skills:
 
