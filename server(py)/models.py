@@ -1,5 +1,5 @@
 from pydantic import BaseModel, EmailStr
-
+from typing import List,Dict
 class UserCreate(BaseModel):
     email: EmailStr
     password: str
@@ -18,3 +18,14 @@ class TokenRefreshRequest(BaseModel):
 
 class LogoutRequest(BaseModel):
     token: str 
+  
+class Message(BaseModel):
+  role: str
+  content: str
+
+class chatRequest(BaseModel):
+    messages: List[Dict[str,str]]
+    max_tokens: int
+    temperature: float
+    top_p: float
+    model: str

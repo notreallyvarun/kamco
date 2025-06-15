@@ -24,4 +24,20 @@ Content-Type: application/json
 {
   "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAa2FtY28uY29tIiwiZXhwIjoxNzUwMjUwMjQ3fQ.NJ69ou05Cep6h4fPCKWuN-9jZYo8xGr1M-YJbukVVR4"
 }
+###
+POST http://localhost:8000/api/chat/userprofile
+Content-Type: application/json
+Authorization: Bearer ebcd9f8466674056b2c09d352cbb0de1
 
+{
+  "messages": [{
+                "role": "user",
+                "content": "I am going to Paris, what should I see?"
+            }],
+  "max_tokens": 4096,
+  "temperature": 1,
+  "top_p": 1,
+  "model": "intern-gpt-4o"
+
+}
+ 

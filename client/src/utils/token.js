@@ -14,3 +14,4 @@ export function isTokenExpired(token) {
   const expiry = getTokenExpiry(token);
   return !expiry || Date.now() >= expiry;
 }
+

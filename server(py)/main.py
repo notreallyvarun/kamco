@@ -1,7 +1,8 @@
 from fastapi import FastAPI
-from routes import router
+from auth_routes import router
 from dotenv import load_dotenv
 from fastapi.middleware.cors import CORSMiddleware
+from chat_routes import chat_router
 load_dotenv()
 
 app = FastAPI()
@@ -16,3 +17,4 @@ app.add_middleware(
         )
 
 app.include_router(router, prefix="/api/auth")
+app.include_router(chat_router, prefix="/api/chat")

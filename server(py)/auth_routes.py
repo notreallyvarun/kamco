@@ -2,11 +2,11 @@ from fastapi import APIRouter, HTTPException, Request, status
 from models import UserCreate, UserLogin, TokenResponse, TokenRefreshRequest, LogoutRequest  
 from auth import hash_password, verify_password, create_access_token, create_refresh_token, decode_token  
 from datetime import datetime, timedelta
+from chat import chat
+from models import chatRequest
 import os
 from dotenv import load_dotenv
-
 from database import db  
-
 load_dotenv()
 
 jwtSecret = os.getenv("JWT_SECRET")
@@ -108,7 +108,9 @@ async def refresh_token(body: TokenRefreshRequest):
         raise e
     except Exception as e:
         raise HTTPException(status_code=403, detail=f"Token verification failed: {e}")
-      
+    
+
+
 
 @router.post("/logout", status_code=status.HTTP_204_NO_CONTENT)
 async def logout(body: LogoutRequest):
