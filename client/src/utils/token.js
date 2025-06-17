@@ -15,3 +15,14 @@ export function isTokenExpired(token) {
   return !expiry || Date.now() >= expiry;
 }
 
+// utils/token.js
+
+export function checkTokenAndRedirect() {
+  const token = localStorage.getItem("token");
+  if (!token) {
+    window.location.href = "/login";
+    return null;
+  }
+  return token;
+}
+

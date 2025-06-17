@@ -1,31 +1,33 @@
 import os
+from fastapi.responses import JSONResponse
 from dotenv import load_dotenv
 from openai import AzureOpenAI
-from fastapi import Request,HTTPException
+
 load_dotenv()
 
-api_key = os.getenv("api_key")
-api_version = os.getenv("api_version")
-deployment = os.getenv("deployment")
-endpoint = os.getenv("azure_endpoint")
+# Load environment variables
+api_key = os.getenv("API_KEY")
+api_base = os.getenv("AZURE_ENDPOINT")
+api_version = os.getenv("API_VERSION")
+deployment_name = os.getenv("DEPLOYMENT_NAME")
 
+# Initialize Azure OpenAI client
 client = AzureOpenAI(
-  api_key=api_key,
-  api_version=api_version,
-  azure_endpoint=endpoint 
+    api_key=api_key,
+    api_version=api_version,
+    azure_endpoint=api_base#type:ignore
 )
 
-def chat(prompt):
-  try:
-    messages_payload = prompt.messages
-    response = client.chat.completions.create(
-        model=prompt.model,
-        messages = messages_payload,
-        max_tokens=prompt.max_tokens,
-        temperature=prompt.temperature,
-        top_p=prompt.top_p      
-    )
-    reply_text = response.choices[0].message.content
-    return {"reply": reply_text}
-  except Exception as e:
-    raise HTTPException(status_code=500, detail=str(e))
+def call_llm(payload: dict):
+    try:
+        response = client.chat.completions.create(
+            model=payload["model"],           
+            messages=payload["messages"],     
+            max_tokens=payload["max_tokens"],
+            temperature=payload["temperature"],
+            top_p=payload["top_p"],
+        )
+        return JSONResponse(content={"reply": response.choices[0].message.content})
+    except Exception as e:
+        print(f"LLM call error: {e}")
+        raise e

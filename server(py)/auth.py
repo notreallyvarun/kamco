@@ -1,6 +1,3 @@
-# Backend: auth.py
-# Your existing authentication utility functions, with improved time handling.
-
 from passlib.context import CryptContext
 from fastapi import HTTPException
 import jwt
@@ -10,8 +7,8 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv() 
-accesstokentime = int(os.getenv('ACCESS_TOKEN_TIME'))
-refreshtokentime = int(os.getenv('REFRESH_TOKEN_TIME')) 
+accesstokentime = int(os.getenv('ACCESS_TOKEN_TIME'))#type:ignore
+refreshtokentime = int(os.getenv('REFRESH_TOKEN_TIME'))#type:ignore 
 algorithm = os.getenv('ALGORITHM', "HS256") 
 
 # Password hashing context

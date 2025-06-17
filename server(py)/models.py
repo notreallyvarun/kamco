@@ -24,8 +24,8 @@ class Message(BaseModel):
   content: str
 
 class chatRequest(BaseModel):
-    messages: List[Dict[str,str]]
+    model: str
+    messages: List[Message]
     max_tokens: int
     temperature: float
     top_p: float
-    model: str

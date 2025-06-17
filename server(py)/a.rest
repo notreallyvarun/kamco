@@ -1,43 +1,32 @@
-POST http://localhost:8000/api/auth/register
-Content-Type: application/json
-
-{
-  "email":"test@kamco.com",
-  "password":"5214"
-}
-###
-POST http://localhost:8000/api/auth/login
-Content-Type: application/json
-
-{
-  "email":"test@kamco.com",
-  "password":"5214"
-}
-###
-GET http://localhost:8000/api/auth/profile
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAa2FtY28uY29tIiwiZXhwIjoxNzQ5NjQ1NDkxfQ.5__qZs14w0zNk3PhN_nerk6SaDdjX86GXpTId38LtqM
-
-###
-POST http://localhost:8000/api/auth/token
-Content-Type: application/json
-
-{
-  "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAa2FtY28uY29tIiwiZXhwIjoxNzUwMjUwMjQ3fQ.NJ69ou05Cep6h4fPCKWuN-9jZYo8xGr1M-YJbukVVR4"
-}
-###
 POST http://localhost:8000/api/chat/userprofile
 Content-Type: application/json
-Authorization: Bearer ebcd9f8466674056b2c09d352cbb0de1
 
 {
-  "messages": [{
-                "role": "user",
-                "content": "I am going to Paris, what should I see?"
-            }],
-  "max_tokens": 4096,
-  "temperature": 1,
-  "top_p": 1,
-  "model": "intern-gpt-4o"
-
+  "model": "intern-gpt-4o",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hello"
+    }
+  ],
+  "max_tokens": 1000,
+  "temperature": 0.7,
+  "top_p": 1.0
 }
- 
+###
+### Send image to API
+POST http://localhost:8000/api/chat/upload
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="image.jpg"
+Content-Type: image/jpeg
+
+< ./image.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="prompt"
+
+return in json format
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+

@@ -1,9 +1,7 @@
 from fastapi import APIRouter, HTTPException, Request, status
 from models import UserCreate, UserLogin, TokenResponse, TokenRefreshRequest, LogoutRequest  
 from auth import hash_password, verify_password, create_access_token, create_refresh_token, decode_token  
-from datetime import datetime, timedelta
-from chat import chat
-from models import chatRequest
+from datetime import datetime
 import os
 from dotenv import load_dotenv
 from database import db  
@@ -36,7 +34,7 @@ async def get_Profile(request:Request):
     token = auth_header.split(" ")[1]
     
     try:
-        payload = decode_token(token, jwtSecret)
+        payload = decode_token(token, jwtSecret)#type:ignore
         email = payload.get('email')
         if not email:
             raise HTTPException(status_code=403, detail="Invalid token payload: missing email")
@@ -96,7 +94,7 @@ async def refresh_token(body: TokenRefreshRequest):
         raise HTTPException(status_code=403, detail="Invalid refresh token")
 
     try:
-        payload = decode_token(token, refreshSecret)
+        payload = decode_token(token, refreshSecret)#type:ignore
         email = payload.get("email")
         if not email:
             raise HTTPException(status_code=403, detail="Invalid token payload")
@@ -119,7 +117,7 @@ async def logout(body: LogoutRequest):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Refresh token is required")
 
     try:
-        payload = decode_token(token, refreshSecret)
+        payload = decode_token(token, refreshSecret)#type:ignore
         email = payload.get("email")
         if not email:
             raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Invalid token payload")
